@@ -81,7 +81,10 @@ public abstract class BaseZombie {
         var playerLocation = target.getLocation();
         var zombieLocation = entity.getLocation();
 
-        if (zombieLocation.distance(playerLocation) <= 400) {
+        var isPlayerSneaking = target.isSneaking();
+        var detectionRange = isPlayerSneaking ? 40 : 400;
+
+        if (zombieLocation.distance(playerLocation) <= detectionRange) {
             entity.setTarget(target);
             var direction = playerLocation.toVector().subtract(zombieLocation.toVector()).normalize();
             var blockLocation = zombieLocation.clone();
