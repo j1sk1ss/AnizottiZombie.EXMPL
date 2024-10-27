@@ -2,3 +2,9 @@ name: AnizottiZombie
 version: '${project.version}'
 main: org.cordell.com.anizottizombie.AnizottiZombie
 api-version: '1.21'
+
+
+commands:
+  create_horde:
+    description: "Create horde"
+    usage: "/create_horde <horde_size>"
