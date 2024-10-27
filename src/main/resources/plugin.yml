@@ -1,0 +1,4 @@
+name: AnizottiZombie
+version: '${project.version}'
+main: org.cordell.com.anizottizombie.AnizottiZombie
+api-version: '1.21'
