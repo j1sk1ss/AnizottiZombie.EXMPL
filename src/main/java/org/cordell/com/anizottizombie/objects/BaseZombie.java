@@ -101,6 +101,9 @@ public abstract class BaseZombie {
 
             return true;
         }
+        else {
+            entity.setTarget(null);
+        }
 
         return false;
     }

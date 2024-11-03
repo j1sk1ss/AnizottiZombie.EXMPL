@@ -35,18 +35,18 @@ public class ZombieHorde {
         for (int i = 0; i < zombieCount; i++) {
             var option = random.nextInt(100);
             if (option < 50) {
-                if (option < 40) zombies.add(new DefaultZombie(100, 1, .2));
-                else zombies.add(new Archer(10, 1, .3));
+                if (option < 40) zombies.add(new DefaultZombie(200, 1, .3));
+                else zombies.add(new Archer(10, 1, .4));
             }
             else if (option < 60) {
-                if (option < 55) zombies.add(new ArmoredZombie(250, 2, .2));
+                if (option < 55) zombies.add(new ArmoredZombie(450, 2, .4));
                 else zombies.add(new ArmoredArcher(100, 1, .2));
             }
-            else if (option < 70) zombies.add(new FatmanZombie(500, 2, .2));
-            else if (option < 99) zombies.add(new LightZombie(5, 1, .35));
+            else if (option < 70) zombies.add(new FatmanZombie(900, 2, .4));
+            else if (option < 99) zombies.add(new LightZombie(15, 1, .45));
         }
 
-        spawnZombies(zombieCount / 5);
+        spawnZombies(zombieCount / 10);
         healthHorde();
         for (var player : Bukkit.getOnlinePlayers()) {
             hpBar.addPlayer(player);
